@@ -18,6 +18,7 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
+            <div>
             <a class="navbar-brand" href="#">MY COMPANY</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,9 +36,12 @@
                 </li>
                 
                 <?php 
-                    if(isset($_SESSION['userUid'])){
-                        $user = $_SESSION['usersName'];
-                    ?>
+                if(isset($_SESSION['usersUID'])){
+                    $user = $_SESSION['usersName'];
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="users.php">USERS</a>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#"><?php echo "Welcome $user" ?></a>
                     </li>

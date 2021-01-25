@@ -8,7 +8,7 @@ if (isset($_POST['submit'])){
     $pwd = $_POST["pwd"];
     $pwdHashed = password_hash($pwd, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES ('$name', '$email', '$uid', '$pwdHashed')";
+    $sql = "INSERT INTO users (usersName, usersEmail, usersUID, usersPWD) VALUES ('$name', '$email', '$uid', '$pwdHashed')";
     
     if (mysqli_query($conn, $sql)) {
         header("location: login.php?signup=success");
